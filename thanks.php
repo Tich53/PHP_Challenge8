@@ -27,7 +27,9 @@ if (empty($user_email)) {
     }
 if (filter_var($user_email, FILTER_VALIDATE_EMAIL)){
         $errors = "";
-    } else { echo $errors = "Le format de votre adresse email est incorrect";
+    } else { 
+        echo $errors = "Le format de votre adresse email est incorrect";
+        echo '<br>';
     }
 if (empty($user_tel)) {
         echo $errors = "Le champ 'numéro de téléphone' est obligatoire";
