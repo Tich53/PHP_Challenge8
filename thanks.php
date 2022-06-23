@@ -10,37 +10,36 @@ $user_message = $_POST['user_message'];
 $errors = "";
 
 if (empty($user_name)) {
-        echo $errors = "Le champ 'prénom' est obligatoire";
-        echo '<br>';
-    } 
+    echo $errors = "Le champ 'prénom' est obligatoire";
+    echo '<br>';
+} 
 if (empty($user_surname)) {
-        echo $errors = "Le champ 'nom' est obligatoire";
-        echo '<br>';
-    } 
-if (empty($subject)){
-        echo $errors = "L'objet' est obligatoire";
-        echo '<br>';
-    } 
+    echo $errors = "Le champ 'nom' est obligatoire";
+    echo '<br>';
+} 
+if (empty($subject)) {
+    echo $errors = "L'objet' est obligatoire";
+    echo '<br>';
+} 
 if (empty($user_email)) {
-        echo $errors = "Le champ 'email' est obligatoire";
-        echo '<br>';
-    }
-if (filter_var($user_email, FILTER_VALIDATE_EMAIL)){
-        $errors = "";
-    } else { 
-        echo $errors = "Le format de votre adresse email est incorrect";
-        echo '<br>';
-    }
+    echo $errors = "Le champ 'email' est obligatoire";
+    echo '<br>';
+}
+if (filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+    echo "";
+} else { 
+    echo $errors = "Le format de votre adresse email est incorrect";
+    echo '<br>';
+}
 if (empty($user_tel)) {
-        echo $errors = "Le champ 'numéro de téléphone' est obligatoire";
-        echo '<br>';
-    }
+    echo $errors = "Le champ 'numéro de téléphone' est obligatoire";
+    echo '<br>';
+}
 if (empty($user_message)) {
-        echo $errors = "Votre message est vide";
-        echo '<br>';
-    }
+    echo $errors = "Votre message est vide";
+    echo '<br>';
+}
 if (empty($errors)) {
-
     echo "Merci $user_name $user_surname de nous avoir contacté à propos de '$subject'.";
     echo "<br>";
     echo "<br>";
@@ -48,9 +47,5 @@ if (empty($errors)) {
     echo "<br>";
     echo "<br>";
     echo $user_message;
-
-    }
-
-
-
+}
 ?>
